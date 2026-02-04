@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Minesweeper.ViewModel;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,8 @@ namespace Minesweeper
         public MainWindow()
         {
             InitializeComponent();
+            MainWindowViewModel vm = new MainWindowViewModel();
+            DataContext = vm;
         }
 
     }

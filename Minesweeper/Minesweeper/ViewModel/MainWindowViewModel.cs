@@ -1,4 +1,6 @@
-﻿using Minesweeper.MVVM;
+﻿using Minesweeper.Model;
+using Minesweeper.MVVM;
+using Minesweeper.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -7,11 +9,54 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Threading;
 
 namespace Minesweeper.ViewModel
 {
     class MainWindowViewModel : ViewModelBase
     {
+        private readonly ScoreService _scoreService;
+        private DispatcherTimer _timer;
+
+        private GameScore _bestScore;
+        private int _currentSeconds;
+
+        public GameScore BestScore
+        {
+            get => _bestScore;
+            set { _bestScore = value; OnPropertyChanged(); }
+        }
+
+        public int CurrentSeconds
+        {
+            get => _currentSeconds;
+            set { _currentSeconds = value; OnPropertyChanged(); }
+        }
+
+        public RelayCommand StartGameCommand { get; set; }
+
+        public MainWindowViewModel()
+        {
+
+            _scoreService = new ScoreService();
+            BestScore = _scoreService.Load();
+            CurrentSeconds = 0;
+
+            _timer = new DispatcherTimer();
+            _timer.Interval = TimeSpan.FromSeconds(1);
+            _timer.Tick += Timer_Tick;
+
+            StartGameCommand = new RelayCommand(o => StartGame());
+
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            CurrentSeconds++;
+        }
+
+        // začátek Tomíka
+
         public RelayCommand StartCommand => new RelayCommand(execute => StartGame(), canExecute => _isGameRunning == false);
         public RelayCommand StopCommand => new RelayCommand(execute => StopGame(), canExecute => _isGameRunning == true);
 
@@ -64,6 +109,12 @@ namespace Minesweeper.ViewModel
 
         public void StartGame()
         {
+            // + časovač
+            _timer.Stop();
+            CurrentSeconds = 0;
+            _timer.Start();
+
+
             _isGameRunning = true;
             IsReadOnly = true;
             Cells.Clear();
@@ -110,8 +161,28 @@ namespace Minesweeper.ViewModel
 
         public void StopGame()
         {
+            // + časovač
+            _timer.Stop();
+
+            CheckNewRecord(); // zkouška fukčnosti
+
             _isGameRunning = false;
             IsReadOnly = false;
+        }
+
+
+        // kontrola rekordního času
+        private void CheckNewRecord()
+        {
+            if (BestScore == null || CurrentSeconds < BestScore.Seconds)
+            {
+                BestScore = new GameScore
+                {
+                    Seconds = CurrentSeconds,
+                    DateAchieved = DateTime.Now
+                };
+                _scoreService.Save(BestScore);
+            }
         }
     }
 }

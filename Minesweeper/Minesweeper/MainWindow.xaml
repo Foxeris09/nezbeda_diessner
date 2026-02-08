@@ -21,6 +21,12 @@
             <TextBox x:Name="pocetMin" Text="{Binding MineCount, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="30" Height="20" Margin="5,0,10,0"/>
             <Button x:Name="Start" Content="Start Game" Command="{Binding StartCommand}" Width="100" Height="25" Margin="20,0,0,0"/>
             <Button x:Name="Stop" Content="Stop Game" Command="{Binding StopCommand}" Width="100" Height="25" Margin="20,0,0,0"/>
+            <Label Content="Čas:" Margin="20,0,0,0"/>
+            <TextBlock Text="{Binding CurrentSeconds}" FontWeight="Bold" VerticalAlignment="Center"/>
+            <Label Content="s"/>
+            <Label Content="Nejlepší: " Margin="20,0,0,0"/>
+            <TextBlock Text="{Binding BestScore.Seconds}" FontWeight="Bold" VerticalAlignment="Center"/>
+            <Label Content="s"/>
         </StackPanel>
         <ItemsControl ItemsSource="{Binding Cells}" Grid.Row="2">
             <ItemsControl.ItemsPanel>

@@ -5,8 +5,10 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Threading;
@@ -60,6 +62,8 @@ namespace Minesweeper.ViewModel
         public RelayCommand StartCommand => new RelayCommand(execute => StartGame(), canExecute => _isGameRunning == false);
         public RelayCommand StopCommand => new RelayCommand(execute => StopGame(), canExecute => _isGameRunning == true);
 
+        public RelayCommand RevealCellCommand => new RelayCommand(execute => Click(execute as CellViewModel), canExecute => _isGameRunning == true);
+
         private int _rows = 10;
         public int Rows {
             get => _rows;
@@ -106,6 +110,7 @@ namespace Minesweeper.ViewModel
 
         public ObservableCollection<CellViewModel> Cells { get; set; } = new ObservableCollection<CellViewModel>();
 
+        public int RevealedCells;
 
         public void StartGame()
         {
@@ -113,6 +118,8 @@ namespace Minesweeper.ViewModel
             _timer.Stop();
             CurrentSeconds = 0;
             _timer.Start();
+
+            RevealedCells = 0;
 
 
             _isGameRunning = true;
@@ -134,8 +141,6 @@ namespace Minesweeper.ViewModel
                 if (Cells[i].State != -1)
                 {
                     Cells[i].State = -1;
-                    Cells[i].DisplayContent = "X";
-                    Cells[i].BackgroundColor = Brushes.Red;
                     placedMines++;
                 }
 
@@ -154,7 +159,6 @@ namespace Minesweeper.ViewModel
                     }
                 }
                 cell.State = count;
-                cell.DisplayContent = count.ToString();
             }
 
         }
@@ -163,8 +167,6 @@ namespace Minesweeper.ViewModel
         {
             // + časovač
             _timer.Stop();
-
-            CheckNewRecord(); // zkouška fukčnosti
 
             _isGameRunning = false;
             IsReadOnly = false;
@@ -184,5 +186,76 @@ namespace Minesweeper.ViewModel
                 _scoreService.Save(BestScore);
             }
         }
+
+        public void Click(CellViewModel cell)
+        {
+            if (cell.Visible)
+            {
+                return;
+            }
+
+            CellReveal(cell);
+
+            if (cell.State == -1)
+            {
+                MessageBox.Show("Prohrál jsi 😢");
+                StopGame();
+                return;
+            }
+
+            if (cell.State == 0)
+            {
+                RevealAround(cell);
+            }
+
+            WinCheck();
+        }
+
+        public void RevealAround(CellViewModel cell)
+        {
+            Queue<CellViewModel> zeros = new Queue<CellViewModel>();
+            zeros.Enqueue(cell);
+            while (zeros.Count > 0)
+            {
+                var zero = zeros.Dequeue();
+                for (int r = zero.Row - 1; r <= zero.Row + 1; r++)
+                {
+                    for (int c = zero.Col - 1; c <= zero.Col + 1; c++)
+                    {
+                        var neighbor = Cells.FirstOrDefault(n => n.Row == r && n.Col == c);
+                        if (neighbor.Visible || neighbor == null)
+                        {
+                            continue;
+                        }
+
+                        CellReveal(neighbor);
+
+                        if (neighbor.State == 0)
+                        {
+                            zeros.Enqueue(neighbor);
+                        }
+                    }
+                }
+
+            }
+        }
+
+        public void CellReveal(CellViewModel cell)
+        {
+            RevealedCells++;
+            cell.Visible = true;
+            cell.DisplayContent = cell.State.ToString();
+        }
+
+        public void WinCheck()
+        {
+            if (Rows * Columns == RevealedCells + MineCount)
+            {
+                MessageBox.Show("Vyhrál jsi!");
+                _timer.Stop();
+                CheckNewRecord();
+            }
+        }
+
     }
 }

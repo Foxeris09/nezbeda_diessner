@@ -14,6 +14,19 @@ namespace Minesweeper.ViewModel
         public int Col { get; set; }
         public int State { get; set; } // -1 = mina; 0 - 8 = počet min v okolí
 
+        private bool _visible = false;
+
+        public bool Visible
+        {
+            get { return _visible; }
+            set { _visible = value; OnPropertyChanged();
+                if (_visible)
+                {
+                    DisplayContent = State.ToString();
+                }
+                }
+        }
+
         private string _displayContent;
         public string DisplayContent
         {

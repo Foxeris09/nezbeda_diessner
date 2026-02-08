@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Vojta\\Desktop\\skola\\programovani\\GitHub\\nezbeda_diessner\\Minesweeper\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B743E303-12E4-4C31-8EE9-2579101E1A35}|Minesweeper\\Minesweeper.csproj|c:\\users\\vojta\\desktop\\skola\\programovani\\github\\nezbeda_diessner\\minesweeper\\minesweeper\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B743E303-12E4-4C31-8EE9-2579101E1A35}|Minesweeper\\Minesweeper.csproj|solutionrelative:minesweeper\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B743E303-12E4-4C31-8EE9-2579101E1A35}|Minesweeper\\Minesweeper.csproj|c:\\users\\vojta\\desktop\\skola\\programovani\\github\\nezbeda_diessner\\minesweeper\\minesweeper\\viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B743E303-12E4-4C31-8EE9-2579101E1A35}|Minesweeper\\Minesweeper.csproj|solutionrelative:minesweeper\\viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B743E303-12E4-4C31-8EE9-2579101E1A35}|Minesweeper\\Minesweeper.csproj|c:\\users\\vojta\\desktop\\skola\\programovani\\github\\nezbeda_diessner\\minesweeper\\minesweeper\\mvvm\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B743E303-12E4-4C31-8EE9-2579101E1A35}|Minesweeper\\Minesweeper.csproj|solutionrelative:minesweeper\\mvvm\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B743E303-12E4-4C31-8EE9-2579101E1A35}|Minesweeper\\Minesweeper.csproj|c:\\users\\vojta\\desktop\\skola\\programovani\\github\\nezbeda_diessner\\minesweeper\\minesweeper\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B743E303-12E4-4C31-8EE9-2579101E1A35}|Minesweeper\\Minesweeper.csproj|solutionrelative:minesweeper\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B743E303-12E4-4C31-8EE9-2579101E1A35}|Minesweeper\\Minesweeper.csproj|c:\\users\\vojta\\desktop\\skola\\programovani\\github\\nezbeda_diessner\\minesweeper\\minesweeper\\model\\gamescore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B743E303-12E4-4C31-8EE9-2579101E1A35}|Minesweeper\\Minesweeper.csproj|solutionrelative:minesweeper\\model\\gamescore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B743E303-12E4-4C31-8EE9-2579101E1A35}|Minesweeper\\Minesweeper.csproj|c:\\users\\vojta\\desktop\\skola\\programovani\\github\\nezbeda_diessner\\minesweeper\\minesweeper\\services\\scoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B743E303-12E4-4C31-8EE9-2579101E1A35}|Minesweeper\\Minesweeper.csproj|solutionrelative:minesweeper\\services\\scoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B743E303-12E4-4C31-8EE9-2579101E1A35}|Minesweeper\\Minesweeper.csproj|c:\\users\\vojta\\desktop\\skola\\programovani\\github\\nezbeda_diessner\\minesweeper\\minesweeper\\viewmodel\\cellviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B743E303-12E4-4C31-8EE9-2579101E1A35}|Minesweeper\\Minesweeper.csproj|solutionrelative:minesweeper\\viewmodel\\cellviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B743E303-12E4-4C31-8EE9-2579101E1A35}|Minesweeper\\Minesweeper.csproj|c:\\users\\vojta\\desktop\\skola\\programovani\\github\\nezbeda_diessner\\minesweeper\\minesweeper\\mvvm\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B743E303-12E4-4C31-8EE9-2579101E1A35}|Minesweeper\\Minesweeper.csproj|solutionrelative:minesweeper\\mvvm\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B743E303-12E4-4C31-8EE9-2579101E1A35}|Minesweeper\\Minesweeper.csproj|c:\\users\\vojta\\desktop\\skola\\programovani\\github\\nezbeda_diessner\\minesweeper\\minesweeper\\minesweeper.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{B743E303-12E4-4C31-8EE9-2579101E1A35}|Minesweeper\\Minesweeper.csproj|solutionrelative:minesweeper\\minesweeper.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,37 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindowViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Vojta\\Desktop\\skola\\programovani\\GitHub\\nezbeda_diessner\\Minesweeper\\Minesweeper\\ViewModel\\MainWindowViewModel.cs",
-              "RelativeDocumentMoniker": "Minesweeper\\ViewModel\\MainWindowViewModel.cs",
-              "ToolTip": "C:\\Users\\Vojta\\Desktop\\skola\\programovani\\GitHub\\nezbeda_diessner\\Minesweeper\\Minesweeper\\ViewModel\\MainWindowViewModel.cs",
-              "RelativeToolTip": "Minesweeper\\ViewModel\\MainWindowViewModel.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAUwJ4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-08T21:32:06.659Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ViewModelBase.cs",
-              "DocumentMoniker": "C:\\Users\\Vojta\\Desktop\\skola\\programovani\\GitHub\\nezbeda_diessner\\Minesweeper\\Minesweeper\\MVVM\\ViewModelBase.cs",
-              "RelativeDocumentMoniker": "Minesweeper\\MVVM\\ViewModelBase.cs",
-              "ToolTip": "C:\\Users\\Vojta\\Desktop\\skola\\programovani\\GitHub\\nezbeda_diessner\\Minesweeper\\Minesweeper\\MVVM\\ViewModelBase.cs",
-              "RelativeToolTip": "Minesweeper\\MVVM\\ViewModelBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-08T21:32:05.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "RelayCommand.cs",
               "DocumentMoniker": "C:\\Users\\Vojta\\Desktop\\skola\\programovani\\GitHub\\nezbeda_diessner\\Minesweeper\\Minesweeper\\MVVM\\RelayCommand.cs",
               "RelativeDocumentMoniker": "Minesweeper\\MVVM\\RelayCommand.cs",
@@ -76,79 +38,45 @@
               "RelativeToolTip": "Minesweeper\\MVVM\\RelayCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-08T21:32:03.219Z",
+              "WhenOpened": "2026-02-08T22:34:52.857Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ScoreService.cs",
-              "DocumentMoniker": "C:\\Users\\Vojta\\Desktop\\skola\\programovani\\GitHub\\nezbeda_diessner\\Minesweeper\\Minesweeper\\Services\\ScoreService.cs",
-              "RelativeDocumentMoniker": "Minesweeper\\Services\\ScoreService.cs",
-              "ToolTip": "C:\\Users\\Vojta\\Desktop\\skola\\programovani\\GitHub\\nezbeda_diessner\\Minesweeper\\Minesweeper\\Services\\ScoreService.cs",
-              "RelativeToolTip": "Minesweeper\\Services\\ScoreService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA9AAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "CellViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vojta\\Desktop\\skola\\programovani\\GitHub\\nezbeda_diessner\\Minesweeper\\Minesweeper\\ViewModel\\CellViewModel.cs",
+              "RelativeDocumentMoniker": "Minesweeper\\ViewModel\\CellViewModel.cs",
+              "ToolTip": "C:\\Users\\Vojta\\Desktop\\skola\\programovani\\GitHub\\nezbeda_diessner\\Minesweeper\\Minesweeper\\ViewModel\\CellViewModel.cs",
+              "RelativeToolTip": "Minesweeper\\ViewModel\\CellViewModel.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-08T21:33:08.529Z",
+              "WhenOpened": "2026-02-08T22:03:51.789Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Minesweeper",
-              "DocumentMoniker": "C:\\Users\\Vojta\\Desktop\\skola\\programovani\\GitHub\\nezbeda_diessner\\Minesweeper\\Minesweeper\\Minesweeper.csproj",
-              "RelativeDocumentMoniker": "Minesweeper\\Minesweeper.csproj",
-              "ToolTip": "C:\\Users\\Vojta\\Desktop\\skola\\programovani\\GitHub\\nezbeda_diessner\\Minesweeper\\Minesweeper\\Minesweeper.csproj",
-              "RelativeToolTip": "Minesweeper\\Minesweeper.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-02-08T21:32:15.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameScore.cs",
-              "DocumentMoniker": "C:\\Users\\Vojta\\Desktop\\skola\\programovani\\GitHub\\nezbeda_diessner\\Minesweeper\\Minesweeper\\Model\\GameScore.cs",
-              "RelativeDocumentMoniker": "Minesweeper\\Model\\GameScore.cs",
-              "ToolTip": "C:\\Users\\Vojta\\Desktop\\skola\\programovani\\GitHub\\nezbeda_diessner\\Minesweeper\\Minesweeper\\Model\\GameScore.cs",
-              "RelativeToolTip": "Minesweeper\\Model\\GameScore.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-08T21:32:33.503Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "de8baf8a-c276-45e4-b91e-a84ae01705b7",
-        "Display": 0,
-        "X": 34,
-        "Y": 67,
-        "Width": 1524,
-        "Height": 849,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Vojta\\Desktop\\skola\\programovani\\GitHub\\nezbeda_diessner\\Minesweeper\\Minesweeper\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Minesweeper\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\Vojta\\Desktop\\skola\\programovani\\GitHub\\nezbeda_diessner\\Minesweeper\\Minesweeper\\MainWindow.xaml",
               "RelativeToolTip": "Minesweeper\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-08T19:08:46.247Z",
+              "WhenOpened": "2026-02-08T22:45:22.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindowViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vojta\\Desktop\\skola\\programovani\\GitHub\\nezbeda_diessner\\Minesweeper\\Minesweeper\\ViewModel\\MainWindowViewModel.cs",
+              "RelativeDocumentMoniker": "Minesweeper\\ViewModel\\MainWindowViewModel.cs",
+              "ToolTip": "C:\\Users\\Vojta\\Desktop\\skola\\programovani\\GitHub\\nezbeda_diessner\\Minesweeper\\Minesweeper\\ViewModel\\MainWindowViewModel.cs",
+              "RelativeToolTip": "Minesweeper\\ViewModel\\MainWindowViewModel.cs",
+              "ViewState": "AgIAAOQAAAAAAAAAAAAowPYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-08T21:52:11.722Z",
               "EditorCaption": ""
             }
           ]

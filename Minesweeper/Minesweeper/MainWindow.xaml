@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Minesweeper"
+        xmlns:local="clr-namespace:Minesweeper" xmlns:viewmodel="clr-namespace:Minesweeper.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:MainWindowViewModel}"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -15,11 +15,12 @@
         <Label Content="Minesweeper" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
             <Label Content="Velikost pole:"/>
-            <TextBox x:Name="sirkaPole" Background="Transparent" Width="30" Height="20" Margin="5,0,5,0"/>
-            <TextBox x:Name="vyskaPole" Background="Transparent" Width="30" Height="20" Margin="5,0,10,0"/>
+            <TextBox x:Name="sirkaPole" Text="{Binding Rows, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="{Binding IsReadOnly}" Background="Transparent" Width="30" Height="20" Margin="5,0,5,0"/>
+            <TextBox x:Name="vyskaPole" Text="{Binding Columns, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="{Binding IsReadOnly}" Background="Transparent" Width="30" Height="20" Margin="5,0,10,0"/>
             <Label Content="Počet min:" Margin="10,0,0,0"/>
-            <TextBox x:Name="pocetMin" Width="30" Height="20" Margin="5,0,10,0"/>
-            <Button x:Name="Start" Content="Start Game" Width="100" Height="25" Margin="20,0,0,0"/>
+            <TextBox x:Name="pocetMin" Text="{Binding MineCount, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="30" Height="20" Margin="5,0,10,0"/>
+            <Button x:Name="Start" Content="Start Game" Command="{Binding StartCommand}" Width="100" Height="25" Margin="20,0,0,0"/>
+            <Button x:Name="Stop" Content="Stop Game" Command="{Binding StopCommand}" Width="100" Height="25" Margin="20,0,0,0"/>
         </StackPanel>
         <ItemsControl ItemsSource="{Binding Cells}" Grid.Row="2">
             <ItemsControl.ItemsPanel>
@@ -37,7 +38,11 @@
                     <Button Command="{Binding RevealCellCommand}" 
                     Content="{Binding DisplayContent}" 
                     Background="{Binding BackgroundColor}"
-                    Margin="1" />
+                    Margin="1"
+                    Width="25"
+                    Height="25"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"/>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>

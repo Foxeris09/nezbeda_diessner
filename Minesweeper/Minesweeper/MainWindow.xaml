@@ -41,7 +41,7 @@
 
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Button Command="{Binding RevealCellCommand}" 
+                    <Button Command="{Binding DataContext.RevealCellCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}" 
                     Content="{Binding DisplayContent}" 
                     Background="{Binding BackgroundColor}"
                     Margin="1"

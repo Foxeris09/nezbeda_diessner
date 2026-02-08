@@ -198,6 +198,7 @@ namespace Minesweeper.ViewModel
 
             if (cell.State == -1)
             {
+
                 MessageBox.Show("Prohrál jsi 😢");
                 StopGame();
                 return;
@@ -223,7 +224,7 @@ namespace Minesweeper.ViewModel
                     for (int c = zero.Col - 1; c <= zero.Col + 1; c++)
                     {
                         var neighbor = Cells.FirstOrDefault(n => n.Row == r && n.Col == c);
-                        if (neighbor.Visible || neighbor == null)
+                        if (neighbor == null || neighbor.Visible)
                         {
                             continue;
                         }
@@ -244,16 +245,15 @@ namespace Minesweeper.ViewModel
         {
             RevealedCells++;
             cell.Visible = true;
-            cell.DisplayContent = cell.State.ToString();
         }
 
         public void WinCheck()
         {
             if (Rows * Columns == RevealedCells + MineCount)
             {
-                MessageBox.Show("Vyhrál jsi!");
                 _timer.Stop();
                 CheckNewRecord();
+                MessageBox.Show("Vyhrál jsi!");
             }
         }
 

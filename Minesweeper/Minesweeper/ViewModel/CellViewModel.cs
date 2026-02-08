@@ -22,7 +22,20 @@ namespace Minesweeper.ViewModel
             set { _visible = value; OnPropertyChanged();
                 if (_visible)
                 {
-                    DisplayContent = State.ToString();
+                    BackgroundColor = Brushes.LightGray;
+                    if (State == -1)
+                    {
+                        DisplayContent = "X";
+                    }
+                    else if(State == 0)
+                    {
+                        DisplayContent = "";
+                    }
+                    else
+                    {
+                        DisplayContent = State.ToString();
+                    }
+
                 }
                 }
         }
@@ -34,7 +47,7 @@ namespace Minesweeper.ViewModel
             set { _displayContent = value; OnPropertyChanged(); }
         }
 
-        private Brush _backgroundColor = Brushes.LightGray;
+        private Brush _backgroundColor = Brushes.Gray;
         public Brush BackgroundColor
         {
             get => _backgroundColor;

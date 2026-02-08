@@ -21,6 +21,26 @@
             <TextBox x:Name="pocetMin" Width="30" Height="20" Margin="5,0,10,0"/>
             <Button x:Name="Start" Content="Start Game" Width="100" Height="25" Margin="20,0,0,0"/>
         </StackPanel>
+        <ItemsControl ItemsSource="{Binding Cells}" Grid.Row="2">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid 
+                Columns="{Binding Columns}" 
+                Rows="{Binding Rows}" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button Command="{Binding RevealCellCommand}" 
+                    Content="{Binding DisplayContent}" 
+                    Background="{Binding BackgroundColor}"
+                    Margin="1" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
 
     </Grid>
 </Window>
